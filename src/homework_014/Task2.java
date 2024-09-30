@@ -10,6 +10,8 @@ public class Task2 {
         int[] array = {1, 2, 3, 4, 5};
         int result = sumNum(array);
         System.out.println("Сумма четных чисел: " + result);
+
+
     }
 
     public static int sumNum(int[] numbers) {
