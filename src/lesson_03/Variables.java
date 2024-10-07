@@ -36,7 +36,7 @@ public class Variables {
         double doubleVar = 10.5421;
         System.out.println("Double variable:" + doubleVar);
 
-        float floatVar = 11.65F;
+        float floatVar = 11.65F;  // Явно указать, что число в формате float
         System.out.println("Float variable:" + floatVar);
 
 
