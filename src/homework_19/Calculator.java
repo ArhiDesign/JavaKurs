@@ -22,7 +22,17 @@ public class Calculator {
                 return a / b;
             }
 
-    public static final double PI = 3.141519;
+            private static final double PI = 3.14159;
+
+          //Длинна
+            public double calculateCircumFerence(double radius){
+                return 2 * PI * radius;
+            }
+           //Площадь
+            public double calculateArea(double radius){
+                return PI * radius * radius;
+            }
+
 
 
         }
