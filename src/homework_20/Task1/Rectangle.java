@@ -9,6 +9,7 @@ public class Rectangle extends Shape {
         this.width = width;
         this.height = height;
         }
+
     public void calculateArea() {
         double area = width * height;
         System.out.println("Площадь прямоугольника: " + area);
