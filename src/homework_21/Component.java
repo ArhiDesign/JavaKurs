@@ -25,7 +25,7 @@ public class Component {
         return model;
     }
     public String toString(){
-        return brand + " " + model;
+        return "Component: " + brand + " " + model;
 
     }
 }
