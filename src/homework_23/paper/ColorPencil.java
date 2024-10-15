@@ -1,4 +1,4 @@
-package hommework_23.paper;
+package homework_23.paper;
 
 public class ColorPencil extends Pencil{
     private String color = "Red";

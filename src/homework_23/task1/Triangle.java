@@ -1,4 +1,4 @@
-package hommework_23.task1;
+package homework_23.task1;
 
 public class Triangle extends Shape{
     private double a, b, c;

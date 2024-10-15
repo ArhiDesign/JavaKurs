@@ -1,4 +1,4 @@
-package hommework_23.paper;
+package homework_23.paper;
 
 // Абстрактное "писало"
 abstract class Pen {

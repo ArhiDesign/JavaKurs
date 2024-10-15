@@ -1,4 +1,4 @@
-package hommework_23.task1;
+package homework_23.task1;
 
 public class ShapeApp {
     public static void main(String[] args) {
