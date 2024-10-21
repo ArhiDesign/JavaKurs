@@ -1,34 +1,65 @@
 package homework_24.task2;
 
 public class ElectronicWallet implements PaymentSystem{
-    double balance;
+    private double balance;
+    private String title;
+    private String currency;
 
-    public ElectronicWallet(double balance) {
+    public ElectronicWallet(double balance, String title) {
         this.balance = balance;
+        this.title = title;
+        this.currency = "BTC";
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getCurrency() {
+        return currency;
     }
 
     @Override
     public void withdrawMoney(double amount) {
+        if (amount < 0 || amount > balance) {
+            System.out.println("Insufficient balance");
+            return;
+        }
+        System.out.println("Withdrawing " + amount + " from bank " + title );
+        balance -= amount;
 
     }
 
     @Override
     public void depositTransfer(double amount) {
-        balance += amount;
-        System.out.println("Поступление денег на счет: " + amount + " Остаток: " + balance + " $");
+        if (amount < 0 ) {
+            System.out.println("Недопустимая сумма");
+            return;
+        }
 
+        System.out.println("Deposit " + amount + " to " + title );
+        balance += amount;
+    }
+
+    @Override
+    public double checkBalance() {
+        return balance;
     }
 
     @Override
     public String toString() {
         return "ElectronicWallet{" +
                 "balance=" + balance +
+                ", title='" + title + '\'' +
+                ", currency='" + currency + '\'' +
                 '}';
-    }
-
-   @Override
-    public void checkBalance() {
-      return;
-
     }
 }
