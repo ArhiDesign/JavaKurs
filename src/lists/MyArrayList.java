@@ -1,13 +1,14 @@
 package lists;
 
 import java.lang.reflect.Array;
+import java.util.Iterator;
 
 /**
  * @author Sergey Bugaenko
  * {@code @date} 01.10.2024
  */
 
-public class MyArrayList<T> implements MyList<T> {
+public class MyArrayList<T> implements MyList<T>, Iterable<T>{
     private T[] array;
     private int cursor; // присвоено значение по умолчанию = 0;
 
@@ -244,7 +245,30 @@ public class MyArrayList<T> implements MyList<T> {
 
 
     }
-}
+
+    @Override
+    public Iterator<T> iterator() {
+        //
+        return new MyIterator();
+    }
+    private class MyIterator implements Iterator<T>{
+
+        int currentIndex = 0;
+
+        @Override
+        public boolean hasNext() {
+            return currentIndex < cursor;
+        }
+
+        @Override
+        public T next() {
+            return array[currentIndex++];
+         //   T value = array[currentIndex];
+           // currentIndex++;
+           // return value;
+        }
+    }
+}//
 
 /*
 1. Добавлять в массив элемент (не думая об индексах, размере массива) ++
