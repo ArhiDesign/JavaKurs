@@ -11,23 +11,23 @@ public enum Seasons {
     AUTUMN("Осень",14);
 
     private  String season;
-    private int temp;
+    private int averageTemperature;
 
     Seasons(String season, int temp) {
         this.season = season;
-        this.temp = temp;
+        this.averageTemperature = temp;
     }
 
     public String getSeason() {
         return season;
     }
 
-    public int getTemp() {
-        return temp;
+    public int getAverageTemperature() {
+        return averageTemperature;
     }
 
     @Override
     public String toString() {
-        return season + " - Средняя температура: " + temp + "°C";
+        return season + " - Средняя температура: " + averageTemperature + "°C";
     }
 }
