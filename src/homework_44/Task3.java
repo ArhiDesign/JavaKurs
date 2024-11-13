@@ -20,6 +20,7 @@ getFiltered();
 
         List<Integer> integers = List.of(10, 1, 4, 2, 79, 15);
 
+// На выходе получим список интов
         List<Integer> result = integers.stream()
                 .filter(i -> i % 2 == 0)
                 .map(i -> i * 2 )
